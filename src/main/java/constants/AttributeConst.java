@@ -34,8 +34,12 @@ public enum AttributeConst {
     EMP_ADMIN_FLG("admin_flag"),
 
     //管理者フラグ
-    ROLE_FLAG_TRUE(1),
+    ROLE_ADMIN(1),
     ROLE_GENERAL(0),
+
+    //削除フラグ
+    DEL_FLAG_TRUE(1),
+    DEL_FLAG_FALSE(0),
 
     //日報管理
     REPORT("report"),
@@ -46,7 +50,7 @@ public enum AttributeConst {
     REP_TITLE("title"),
     REP_CONTENT("content");
 
-	//文字列を保有するフィールド
+    //文字列を保有するフィールド
     private final String text;
     //数値を保有するフィールド
     private final Integer i;
