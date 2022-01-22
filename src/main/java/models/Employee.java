@@ -62,16 +62,18 @@ public class Employee {
     private String code;
 
     /**
+     * 氏名
+     */
+    @Column(name = JpaConst.EMP_COL_NAME, nullable = false)
+    private String name;
+
+    /**
      * パスワード
      */
     @Column(name = JpaConst.EMP_COL_PASS, length = 64, nullable = false)
     private String password;
 
-    /**
-     * 氏名
-     */
-    @Column(name = JpaConst.EMP_COL_NAME, nullable = false)
-    private String name;
+
 
     /**
      * 管理権限があるかどうか(一般：０、管理者：１)
