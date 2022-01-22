@@ -14,15 +14,13 @@ public class ServiceBase {
     /**
      * EntityManagerインスタンス
      */
-
     protected EntityManager em = DBUtil.createEntityManager();
 
     /**
      * EntityManagerのクローズ
      */
-
     public void close() {
-        if(em.isOpen()) {
+        if (em.isOpen()) {
             em.close();
         }
     }

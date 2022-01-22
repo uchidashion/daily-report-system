@@ -64,7 +64,7 @@ public class Employee {
     /**
      * パスワード
      */
-    @Column(name = JpaConst.EMP_COL_NAME, length = 64, nullable = false)
+    @Column(name = JpaConst.EMP_COL_PASS, length = 64, nullable = false)
     private String password;
 
     /**
