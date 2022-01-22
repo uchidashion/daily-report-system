@@ -13,22 +13,22 @@
                 社員番号かパスワードが間違っています。
             </div>
         </c:if>
-        <c:if test="${flush != null }">
+        <c:if test="${flush != null}">
             <div id="flush_success">
-                <c:out value="${flush}" />
+                <c:out value="${flush}"></c:out>
             </div>
         </c:if>
         <h2>ログイン</h2>
-        <form method="post" action="<c:url value='/?action=${action}&command=${command}' />">
-            <label for="${AttributeConst.EMP_CODE.getValue() }">社員番号</label>
+        <form method="POST" action="<c:url value='/?action=${action}&command=${command}' />">
+            <label for="${AttributeConst.EMP_CODE.getValue()}">社員番号</label><br />
             <input type="text" name="${AttributeConst.EMP_CODE.getValue()}" value="${code}" />
             <br /><br />
 
-            <label for="${AttributeConst.EMP_PASS.getValue()}">パスワード</label>
+            <label for="${AttributeConst.EMP_PASS.getValue()}">パスワード</label><br />
             <input type="password" name="${AttributeConst.EMP_PASS.getValue()}" />
             <br /><br />
 
-            <input type="hidden" name="${AttriuteConst.TOKEN.getValue()}" value="${_token}" />
+            <input type="hidden" name="${AttributeConst.TOKEN.getValue()}" value="${_token}" />
             <button type="submit">ログイン</button>
         </form>
     </c:param>
