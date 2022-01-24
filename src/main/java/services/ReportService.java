@@ -28,6 +28,7 @@ public class ReportService extends ServiceBase {
         List<Report> reports = em.createNamedQuery(JpaConst.Q_REP_GET_ALL_MINE, Report.class)
                 .setParameter(JpaConst.JPQL_PARM_EMPLOYEE, EmployeeConverter.toModel(employee))
                 .setFirstResult(JpaConst.ROW_PER_PAGE * (page - 1))
+                .setMaxResults(JpaConst.ROW_PER_PAGE)
                 .getResultList();
 
         return ReportConverter.toViewList(reports);
@@ -52,7 +53,7 @@ public class ReportService extends ServiceBase {
      * @param page ページ数
      * @return 一覧画面に表示するデータのリスト
      */
-    public List<ReportView> getAllPerPsage(int page){
+    public List<ReportView> getAllPerPage(int page){
 
         List<Report> reports = em.createNamedQuery(JpaConst.Q_REP_GET_ALL,Report.class)
                 .setFirstResult(JpaConst.ROW_PER_PAGE * (page - 1))
