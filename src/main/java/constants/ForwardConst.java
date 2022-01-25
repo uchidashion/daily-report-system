@@ -35,7 +35,7 @@ public enum ForwardConst {
     FW_EMP_NEW("employees/new"),
     FW_EMP_EDIT("employees/edit"),
     FW_REP_INDEX("reports/index"),
-    FW_REP_SHOW("repors/show"),
+    FW_REP_SHOW("reports/show"),
     FW_REP_NEW("reports/new"),
     FW_REP_EDIT("reports/edit");
 
